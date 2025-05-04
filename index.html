@@ -5,9 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BIRD Walking Tour</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f1faff;
+    text-align: center;
+    padding: 40px;
+  }
+  h1 {
+    color: #004080;
+  }
+  .locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+  }
+</style>
+
 </head>
 <body>
   <h1>Welcome to BIRD Lucknow</h1>
   <p>Scan the QR codes placed around the campus to learn more about each location.</p>
+  <div class="locations">
+  <div class="card">
+    <h2>Reception</h2>
+    <a href="locations/reception.html">Go to Reception</a>
+  </div>
+  <div class="card">
+    <h2>Library</h2>
+    <a href="locations/library.html">Go to Library</a>
+  </div>
+  <div class="card">
+    <h2>Auditorium</h2>
+    <a href="locations/auditorium.html">Go to Auditorium</a>
+  </div>
 </body>
 </html>
