@@ -18,6 +18,12 @@
   min-height: 100vh;
   backdrop-filter: brightness(0.8);
   }
+    .logo-img {
+  height: 120px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
   h1 {
     color: #004080;
   }
@@ -44,13 +50,34 @@
     color: #0077cc;
     font-weight: bold;
   }
+    @media (max-width: 600px) {
+  body {
+    padding: 20px;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
+}
+
 
 </style>  
 
 </head>
 <body>
   <div style="position: fixed; top: 20px; right: 20px; z-index: 999;">
-  <img src="bird_lucknow_logo.png" alt="BIRD Lucknow Logo" style="height: 120px;">
+  <img src="bird_lucknow_logo.png" alt="BIRD Lucknow Logo" class="logo-img";">
 </div>
   <h1>Welcome to BIRD Lucknow</h1>
   <p>Scan the QR codes placed around the campus to learn more about each location.</p>
