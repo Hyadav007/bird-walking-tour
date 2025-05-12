@@ -14,21 +14,18 @@
       background-repeat: no-repeat;
       color: #ffffff;
       text-align: center;
-      padding: 40px 10px;
+      padding: 100px 10px 40px 10px; /* Top padding for logo space */
       min-height: 100vh;
       backdrop-filter: brightness(0.8);
     }
 
     .logo-img {
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
-      width: 80px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+      width: 70px;
+      height: auto;
+      z-index: 999;
     }
 
     h1 {
@@ -50,7 +47,7 @@
       padding: 20px;
       width: 250px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .card:hover {
@@ -63,28 +60,9 @@
       font-weight: bold;
     }
 
-    @media screen and (max-width: 768px) {
-      .logo-img {
-        position: relative;
-        display: block;
-        margin: 10px auto 0;
-        width: 60px;
-      }
-
-      h1 {
-        font-size: 24px;
-        margin-top: 10px;
-      }
-
-      .locations {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
     @media (max-width: 600px) {
       body {
-        padding: 20px;
+        padding: 100px 10px 20px 10px; /* Ensure space for logo */
         background-size: cover;
         background-position: center top;
       }
@@ -99,34 +77,28 @@
       }
 
       .logo-img {
-        height: 80px;
-        width: 70px;
+        width: 60px;
       }
     }
-  </style>  
+  </style>
 </head>
 <body>
-  <div style="position: fixed; top: 20px; right: 20px; z-index: 999;">
-    <img src="bird_lucknow_logo.png" alt="BIRD Lucknow Logo" class="logo-img">
-  </div>
+  <img src="bird_lucknow_logo.png" alt="BIRD Lucknow Logo" class="logo-img" />
+  <h1>Welcome to BIRD Lucknow</h1>
+  <p>Scan the QR codes placed around the campus to learn more about each location.</p>
 
-  <div class="container">
-    <h1>Welcome to BIRD Lucknow</h1>
-    <p>Scan the QR codes placed around the campus to learn more about each location.</p>
-
-    <div class="locations">
-      <div class="card">
-        <h2>Reception</h2>
-        <a href="https://hyadav007.github.io/bird-walking-tour/reception.html">Go to Reception</a>
-      </div>
-      <div class="card">
-        <h2>Library</h2>
-        <a href="locations/library.html">Go to Library</a>
-      </div>
-      <div class="card">
-        <h2>Auditorium</h2>
-        <a href="locations/auditorium.html">Go to Auditorium</a>
-      </div>
+  <div class="locations">
+    <div class="card">
+      <h2>Reception</h2>
+      <a href="https://hyadav007.github.io/bird-walking-tour/reception.html">Go to Reception</a>
+    </div>
+    <div class="card">
+      <h2>Library</h2>
+      <a href="locations/library.html">Go to Library</a>
+    </div>
+    <div class="card">
+      <h2>Auditorium</h2>
+      <a href="locations/auditorium.html">Go to Auditorium</a>
     </div>
   </div>
 </body>
