@@ -14,7 +14,7 @@
       background-repeat: no-repeat;
       color: #ffffff;
       text-align: center;
-      padding: 100px 10px 40px 10px; /* Top padding for logo space */
+      padding: 100px 10px 40px 10px;
       min-height: 100vh;
       backdrop-filter: brightness(0.8);
     }
@@ -40,29 +40,38 @@
       margin-top: 30px;
     }
 
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .card {
       background: rgba(0, 0, 0, 0.6);
-      color: #fff;
       border-radius: 12px;
       padding: 20px;
       width: 250px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: transform 0.3s;
+      cursor: pointer;
     }
 
     .card:hover {
       transform: translateY(-5px);
     }
 
-    .card a {
-      text-decoration: none;
-      color: #0077cc;
+    .card h2 {
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .card p {
+      color: #00aaff;
       font-weight: bold;
     }
 
     @media (max-width: 600px) {
       body {
-        padding: 100px 10px 20px 10px; /* Ensure space for logo */
+        padding: 100px 10px 20px 10px;
         background-size: cover;
         background-position: center top;
       }
@@ -88,18 +97,26 @@
   <p>Scan the QR codes placed around the campus to learn more about each location.</p>
 
   <div class="locations">
-    <div class="card">
-      <h2>Reception</h2>
-      <a href="https://hyadav007.github.io/bird-walking-tour/reception.html">Go to Reception</a>
-    </div>
-    <div class="card">
-      <h2>Library</h2>
-      <a href="locations/library.html">Go to Library</a>
-    </div>
-    <div class="card">
-      <h2>Auditorium</h2>
-      <a href="locations/auditorium.html">Go to Auditorium</a>
-    </div>
+    <a href="https://hyadav007.github.io/bird-walking-tour/reception.html" class="card-link">
+      <div class="card">
+        <h2>Reception</h2>
+        <p>Go to Reception</p>
+      </div>
+    </a>
+    
+    <a href="locations/library.html" class="card-link">
+      <div class="card">
+        <h2>Library</h2>
+        <p>Go to Library</p>
+      </div>
+    </a>
+    
+    <a href="locations/auditorium.html" class="card-link">
+      <div class="card">
+        <h2>Auditorium</h2>
+        <p>Go to Auditorium</p>
+      </div>
+    </a>
   </div>
 </body>
 </html>
